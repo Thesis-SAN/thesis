@@ -21,6 +21,15 @@ Una de las actividades fundamentales de la corporación es el comercio minorista
 
 La red está organizada de forma jerárquica teniendo en su nivel más alto a las Sucursales, las cuales se dividen en Centros Contables o Complejos, los que a su vez se subdividen en Establecimientos Independientes, formados por Establecimientos Dependientes (Figura 2.1).
 
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale=0.4]{Graphics/figura2_1.png}
+    \caption{Red minorista de CIMEX.}
+    \label{fig:red minorista}
+  \end{center}
+\end{figure}
+
 %%
 % IMAGEN
 %%
@@ -61,5 +70,30 @@ En el año 2000 se desarrolló en CIMEX una solución implementada en el lenguaj
 \item En una misma consulta no era posible realizar comparaciones entre diferentes años. 
 \item Los mecanismos de sincronización entre las diferentes instancias de la aplicación no eran suficientes y se limitaba la actualización de los datos.
 \end{itemize}
+
+Posteriormente, en el período comprendido entre los años 2003 y 2006 se desarrolló un sistema centrado en la actividad comercial que se alimentaba de un data warehouse. Esta solución marcó un nuevo comienzo en el desarrollo de soluciones de inteligencia de negocios en CIMEX, ya que por primera vez se utilizó un repositorio de datos basado en el modelo dimensional. Las cuestiones fundamentales que en aquellos momentos llevaron a la elección de este modelo fueron la necesidad de garantizar la homogenización de los datos para el análisis, el mantenimiento de los datos históricos, la ganancia en eficiencia y el requisito de brindar la posibilidad de navegar de forma sencilla y organizada a través de la información con cierto dinamismo. \\
+
+En el DW estaban representados los sujetos del negocio en cubos disímiles, con el objetivo de poseer la información desglosada, facilitándose el análisis y la toma de decisiones. La solución brindaba al usuario la posibilidad de definir con cierto dinamismo cómo deseaba visualizar la información, así como las condiciones de búsqueda. Estas posibilidades permiten afirmar que se logró un paso de avance con respecto a los reportes existentes en la solución anterior. \\
+
+A pesar de las ventajas de esta aproximación, su puesta en práctica demostró que en CIMEX no estaban creadas las condiciones para su explotación, debido fundamentalmente a las razones que se enumeran a continuación: 
+
+\begin{itemize}
+\item El proceso de integración de los datos no garantizaba la actualización eficiente del DW, por lo que no era posible satisfacer ciertos requerimientos informacionales.
+\item No siempre las salidas de los sistemas operacionales requeridas para la actualización del DW estaban disponibles oportunamente. 
+\item Los usuarios demandaban reportes más específicos que le resolvieran necesidades cruciales de información que no estaban satisfechas aún, tales como alertas de reabastecimiento.
+\item No había suficiente madurez en el uso de las herramientas computacionales para aprovechar las bondades de navegación y construcción dinámica de sus propios reportes, aun cuando se realizaron intentos por inculcar la nueva filosofía de trabajo a los analistas y los ejecutivos
+\end{itemize}
+
+Posteriormente en el 2008 se concibe una solución la cual encararía los problemas presentes hasta ese momento, consistiendo la misma en la creación de un almacén de datos operacionales como repositorio de datos conciliados, que posteriormente se derivan en otra base de datos propia de la aplicación. Esta nueva solución presentaría muchos puntos positivos como serian:
+
+\begin{itemize}
+\item Los datos se encuentran centralizados, consolidados y resumidos de forma conveniente.
+\item Se posibilita la generación dinámica de informes a partir de los datos informacionales dentro de algunas de las plantillas predefinidas en la aplicación.
+\item Los resultados finales se visualizan con SQL Server Reporting Services, que permite la distribución de reportes en distintos formatos (hojas de Excel, documentos PDF, documentos Word, entre otros).
+\item La interfaz de usuario es más amigable y se enriquece la presentación final de la información.
+\end{itemize}
+
+
+Pero a su vez esta está quedando obsoleta con respecto a las nuevas necesidades presentes en la empresa mostrándose inconvenientes con respecto a la mudanza de la corporación al trabajo con software de código abierto.
 
 

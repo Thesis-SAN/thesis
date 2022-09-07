@@ -33,10 +33,36 @@ Una estructura multidimensional puede ser modelada a través de dos esquemas pri
 
 \begin{itemize}
 \item \textbf{Esquema de Estrella:} el centro de la estrella es la tabla de hechos y las puntas son las tablas de dimensiones del cubo, un ejemplo de su visualización seria el visto en la Figura 1.1
-\item \textbf{Esquema de Copo de Nieve:} es una variación del esquema de estrella en la cual se normalizan algunas de las dimensiones esencialmente con el objetivo de representar las jerarquías involucradas de manera explícita.
+\item \textbf{Esquema de Copo de Nieve:} es una variación del esquema de estrella en la cual se normalizan algunas de las dimensiones esencialmente con el objetivo de representar las jerarquías involucradas de manera explícita, Figura 1.2
 \end{itemize}
 
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale=0.35]{Graphics/figura1_1.png}
+    \caption{Ejemplo visual de un Esquema de Estrella (Imagen obtenida de la Wikipedia)}
+    \label{fig:estrella}
+  \end{center}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale=0.35]{Graphics/figura1_2.png}
+    \caption{Ejemplo visual de un Esquema de Copo de Nieve (Imagen obtenida de la Wikipedia)}
+    \label{fig:estrella}
+  \end{center}
+\end{figure}
+
 Otra de las ventajas del modelo dimensional es la posibilidad de filtrar los datos de modo sencillo, extrayendo un subconjunto del conjunto de los datos para análisis más detallados (slicing and dicing)\\
+
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[scale=0.4]{Graphics/figura1_3.png}
+    \caption{Reduciendo el espacio de análisis. (Giovinazzo, 2000)}
+    \label{fig:cubo}
+  \end{center}
+\end{figure}
 
 %%
 % IMAGEN
@@ -57,7 +83,7 @@ En búsqueda de la eficiencia de estos procesos, ha crecido el interés en el al
 
 \section*{Python y Django}\label{py_dj}
 \addcontentsline{toc}{section}{Python y Django}
-python y django
+Junto con los avances computacionales y el auge de las tecnologías orientadas al código abierto la corporación CIMEX ha tomado como decición ser parte de las empresas que se suman a este ámbito.
 
 
 
